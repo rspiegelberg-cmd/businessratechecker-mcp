@@ -1,5 +1,7 @@
 # BusinessRateChecker connector (MCP)
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/rspiegelberg-cmd/businessratechecker-mcp)
+
 Business rates data for England and Wales inside an AI assistant: rateable values, comparables, an overpayment verdict, rating history and Valuation Tribunal decisions.
 
 This repository is the public listing for the hosted connector. It holds no code and no data. The connector runs at:
