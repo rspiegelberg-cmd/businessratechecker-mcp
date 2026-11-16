@@ -1,6 +1,6 @@
 # BusinessRateChecker connector (MCP)
 
-[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/rspiegelberg-cmd/businessratechecker-mcp)
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/rspiegelberg-cmd/businessratechecker-mcp) [![BusinessRateChecker MCP connector – tool definition quality and endpoint health on Glama](https://glama.ai/mcp/connectors/com.businessratechecker/mcp/badges/score.svg)](https://glama.ai/mcp/connectors/com.businessratechecker/mcp)
 
 Business rates data for England and Wales inside an AI assistant: rateable values, comparables, an overpayment verdict, rating history and Valuation Tribunal decisions.
 
