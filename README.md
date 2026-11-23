@@ -14,6 +14,8 @@ Transport: streamable HTTP (Model Context Protocol). Official MCP Registry name:
 
 ## Connect
 
+[![Add BusinessRateChecker to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=BusinessRateChecker&config=eyJ1cmwiOiJodHRwczovL3d3dy5idXNpbmVzc3JhdGVjaGVja2VyLmNvbS9tY3AifQ%3D%3D)
+
 Step-by-step instructions for Claude, ChatGPT, Microsoft Copilot and other assistants: https://www.businessratechecker.com/connect
 
 Two tools answer with no sign-in. The rest ask you to sign in once with an email address.
