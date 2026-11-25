@@ -2,7 +2,7 @@
 
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/rspiegelberg-cmd/businessratechecker-mcp) [![BusinessRateChecker MCP connector – tool definition quality and endpoint health on Glama](https://glama.ai/mcp/connectors/com.businessratechecker/mcp/badges/score.svg)](https://glama.ai/mcp/connectors/com.businessratechecker/mcp)
 
-Business rates data for England and Wales inside an AI assistant: rateable values, comparables, an overpayment verdict, rating history and Valuation Tribunal decisions.
+Business rates data for England and Wales inside an AI assistant: rateable values, comparables, an overpayment verdict, rating history, Valuation Tribunal decisions and, in England, major roadworks on a property's street that could support a temporary reduction.
 
 This repository is the public listing for the hosted connector. It holds no code and no data. The connector runs at:
 
@@ -40,8 +40,8 @@ Generic client configuration:
 | `explain_business_rates` | How bills, multipliers and reliefs work, transitional relief, Check, Challenge and Appeal, deadlines and contacts, for England or Wales, with official sources | No |
 | `get_overpayment_map` | How many properties our checks flag as paying too much, by country or council, with each council's rank | No |
 | `find_properties` | Look up an address by postcode and words in the address or description | Yes |
-| `get_property` | Rateable value, how the Valuation Office built it, estimated bill and whether a Check or Challenge has been decided | Yes |
-| `get_overpayment_verdict` | Our verdict from comparable evidence, the indicative saving, and how the Valuation Office's own scheme values similar properties | Yes |
+| `get_property` | Rateable value, how the Valuation Office built it, estimated bill, whether a Check or Challenge has been decided, and major roadworks on the street (England) | Yes |
+| `get_overpayment_verdict` | Our verdict from comparable evidence, the indicative saving, how the Valuation Office's own scheme values similar properties, and roadworks that could support a temporary reduction, with the evidence for a claim on paid plans | Yes |
 | `get_comparables` | The similar properties behind the verdict, with £ per m² and distance | Yes |
 | `get_rating_history` | Rateable values on earlier rating lists and changes on the 2026 list | Yes |
 | `search_properties` | Filter and sort an area's properties: type, size, value, £ per m², verdict, business name, street | Yes |
@@ -58,9 +58,10 @@ Generic client configuration:
 - Every Valuation Office alteration to the 2026 list, and the Check and Challenge case status recorded against each property.
 - Published decisions of the Valuation Tribunal for England and the Valuation Tribunal for Wales, linked to the properties they concern, with the firms that represented the ratepayer.
 - Matched property by property where available: floor areas from the EPC register, and business names from the Food Standards Agency register, the NHS pharmacy, dental and optical registers and council ratepayer lists.
+- Major roadworks on every street in England from the Department for Transport's Street Manager open data, matched to the business properties on that street: works on now and planned, planned and actual dates, traffic management, temporary traffic orders, street ID (USRN) and DfT permit references. A temporary finding, kept separate from the verdict.
 - A comparable-evidence verdict and indicative saving for every property, the same as on the website.
 
-Our pipeline runs every day and collects what the Valuation Office, the tribunals and the other registers have published.
+Roadworks are updated as the Department for Transport publishes them. Our pipeline runs every day and collects what the Valuation Office, the tribunals and the other registers have published.
 
 Scotland and Northern Ireland have separate rating systems and are not covered.
 
@@ -71,6 +72,7 @@ Scotland and Northern Ireland have separate rating systems and are not covered.
 - "What happened at the Valuation Tribunal for shops in Leeds?"
 - "Which firms take the most rating appeals to the tribunal in Bristol?"
 - "How does small business rate relief work in Wales?"
+- "Are there roadworks outside 52B Mutley Plain, Plymouth that could cut its rates, and by when must I claim?"
 
 ## Terms and contact
 
